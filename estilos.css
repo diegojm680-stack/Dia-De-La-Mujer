@@ -1,0 +1,235 @@
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background: linear-gradient(to bottom,#c77dff,#5c0dc4);
+color:#222;
+}
+
+/* HEADER */
+header{
+background: linear-gradient(to right,#4a148c,#7b1fa2);
+color:white;
+text-align:center;
+padding:30px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1{
+margin:0;
+font-size:40px;
+}
+
+header h2{
+margin-top:10px;
+font-weight:normal;
+}
+
+/* NAV */
+nav{
+background:#4a148c;
+text-align:center;
+padding:15px;
+
+position:sticky;
+top:0;
+z-index:100;
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+
+/* animación para esconder menú */
+transition: transform 0.3s ease;
+}
+
+/* clase que ocultará el menú */
+nav.ocultar{
+transform: translateY(-100%);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:6px 10px;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ffd6ff;
+border-bottom:2px solid #ffd6ff;
+padding-bottom:3px;
+}
+
+/* SECCIONES */
+section{
+background:white;
+max-width:1000px;
+margin:40px auto;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+h2{
+color:#6a00f4;
+text-align:center;
+margin-bottom:22px;
+}
+
+/* CONTENIDO FLEX */
+.contenido{
+display:flex;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.mujeres-historia .contenido{
+flex-direction:column;
+text-align:center;
+margin-bottom:50px;
+}
+
+.texto{
+flex:1;
+font-size:18px;
+line-height:1.6;
+}
+
+.imagen{
+flex:1;
+text-align:center;
+}
+
+.imagen img{
+max-width:100%;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+.sorjuana-img{
+    margin-top: 20px;
+}
+
+/* GRAFICAS */
+canvas{
+display:block;
+margin:30px auto;
+background:#f3e5ff;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* LISTA FUENTES */
+ul{
+font-size:18px;
+}
+
+ul li{
+margin-bottom:10px;
+}
+
+ul li a{
+color:#6a00f4;
+font-weight:bold;
+text-decoration:none;
+}
+
+ul li a:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+background:#4a148c;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+box-shadow:0 -4px 10px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+/* contenido vertical */
+.contenido{
+flex-direction:column;
+text-align:center;
+}
+
+/* títulos más pequeños */
+header h1{
+font-size:28px;
+}
+
+header h2{
+font-size:18px;
+}
+
+/* menu más cómodo */
+nav{
+padding:10px;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+font-size:14px;
+}
+
+/* secciones más compactas */
+section{
+margin:20px;
+padding:20px;
+}
+
+/* texto más legible */
+.texto{
+font-size:16px;
+}
+
+/* graficas adaptables */
+canvas{
+width:100%;
+height:auto;
+}
+
+}
+
+@media(max-width:768px){
+
+.imagen img{
+width:90%;
+height:auto;
+}
+
+}
+
+/* IMAGENES FIJAS SOLO EN MUJERES IMPORTANTES */
+
+.mujeres-historia .imagen img{
+width:250px;
+height:300px;
+object-fit:cover;
+}
+
+@media(max-width:768px){
+
+.mujeres-historia .imagen img{
+width:200px;
+height:260px;
+}
+
+}
+
+.reflexion{
+text-align:center;
+font-style:italic;
+font-size:22px;
+line-height:1.6;
+}
